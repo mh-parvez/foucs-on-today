@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f9ed;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 1em auto;
+  padding-inline: 1em;
+
+  h1 {
+    margin-block: 0.5em;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    color: #61481c;
+    span {
+      color: #48a300;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+.card {
+  max-width: 500px;
+  margin: auto;
+  padding: 1em 1.5em;
+  border-radius: 15px;
+  background: #fbfbfb;
+  box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.068);
+
+  img {
+    vertical-align: middle;
+    margin-left: 0.3em;
+  }
+
+  h2 {
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+    word-spacing: 0.2em;
+    margin-bottom: 0.9em;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #858585;
+    margin-block: 1em;
+  }
+
+  .error {
+    color: #ff5151;
+  }
+
+  .quotes {
+    color: #000000;
+    padding-block: 1.5em;
+    text-align: center;
+    font-weight: 600px;
+  }
+
+  .madeby {
+    color: #858585;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  border-radius: 15px;
+  background: #48a3001a;
+
+  .progress {
+    background: #48a300;
+    height: 100%;
+    border-radius: 15px;
+    line-height: 30px;
+    transition: width 0.5s ease-in-out;
+    width: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    span {
+      font-size: 10px;
+      padding-inline: 1em;
+      color: #f2f9ed;
+      min-width: max-content;
+    }
+  }
+}
+
+.goal-box {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 58px;
+  border-radius: 17px;
+  padding-inline: 1em;
+  background-color: #fff;
+  border: 1px solid hsla(0, 0%, 0%, 0.137);
+  margin-bottom: 1em;
+
+  .checkbox {
+    height: 17px;
+    width: 18px;
+    border: 1px solid hsla(0, 0%, 0%, 0.137);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .check-icon {
+      width: 10px;
+      margin: auto;
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    padding-inline-start: 1em;
+    &::placeholder {
+      color: #d9d9d9;
+    }
+  }
+}
+
+/* --------------- handle with js ------------------- */
+
+.completed .checkbox {
+  background-color: #48a300;
+  border: 1px solid #48a300;
+}
+.completed input {
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+
+.error {
+  visibility: hidden;
+}
+
+.show-error {
+  visibility: visible;
+}
